@@ -1,0 +1,50 @@
+﻿<Window x:Name="ConsoleWindow" x:Class="AudioTools.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AudioTools"
+        mc:Ignorable="d"
+        Title="Uncle Roger" Height="450" Width="800" Closing="ConsoleWindow_Closing">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="127*"/>
+        </Grid.ColumnDefinitions>
+        <Grid HorizontalAlignment="Left" Height="166" Margin="0,25,0,0" VerticalAlignment="Top" Width="360">
+            <Button x:Name="btn_toggle_connect" Content="Connect to Chromebook" HorizontalAlignment="Left" Margin="60,137,0,0" VerticalAlignment="Top" Width="255" Click="Btn_toggle_connect_Click" RenderTransformOrigin="1.168,2.615"/>
+            <TextBox x:Name="txBox_ipaddress" HorizontalAlignment="Left" Height="23" Margin="195,23,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="192.168.0.123" FontFamily="Myanmar Text"/>
+            <TextBox x:Name="txBox_username" HorizontalAlignment="Left" Height="23" Margin="195,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="root"/>
+            <TextBox x:Name="txBox_password" HorizontalAlignment="Left" Height="23" Margin="195,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="test0000"/>
+        </Grid>
+        <Label Content="IP Address" HorizontalAlignment="Left" Margin="73,44,0,0" VerticalAlignment="Top" Width="102"/>
+        <Label Content="User account" HorizontalAlignment="Left" Margin="73,77,0,0" VerticalAlignment="Top" Width="102"/>
+        <Label Content="User password" HorizontalAlignment="Left" Margin="73,112,0,0" VerticalAlignment="Top" Width="102"/>
+        <Grid Grid.ColumnSpan="3" HorizontalAlignment="Left" Height="85" Margin="405,38,0,0" VerticalAlignment="Top" Width="349">
+            <TextBox x:Name="txBox_file_candidate_path" HorizontalAlignment="Left" Height="16" Margin="10,10,0,0" TextWrapping="Wrap" Text="&lt;Select new volume table to upload&gt;" VerticalAlignment="Top" Width="329"/>
+            <Button x:Name="btn_update_volume_table" Content="Upload" HorizontalAlignment="Left" Margin="230,45,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-0.203,2.062" Click="Btn_update_volume_table_Click"/>
+            <Button x:Name="btn_pickup_volume_table" Content="Pick File" HorizontalAlignment="Left" Margin="140,45,0,0" VerticalAlignment="Top" Width="75" Click="Btn_pickup_volume_table_Click"/>
+        </Grid>
+        <Grid Grid.ColumnSpan="3" HorizontalAlignment="Left" Height="68" Margin="415,128,0,0" VerticalAlignment="Top" Width="255">
+            <Label x:Name="lab_effect_status" Content="Status: " HorizontalAlignment="Left" Height="30" Margin="10,0,0,0" VerticalAlignment="Top" Width="145"/>
+            <Button x:Name="btn_toggle_effect" Content="Toggle Effect" HorizontalAlignment="Left" Height="23" Margin="10,35,0,0" VerticalAlignment="Top" Width="220" Click="Btn_toggle_effect_Click"/>
+        </Grid>
+        <Grid Grid.ColumnSpan="3" HorizontalAlignment="Left" Height="167" Margin="425,215,0,0" VerticalAlignment="Top" Width="359">
+            <TextBox x:Name="tbx_effect_candidate_files" HorizontalAlignment="Left" Height="58" Margin="10,12,0,0" TextWrapping="Wrap" Text="&lt;Select new effect to update&gt;" VerticalAlignment="Top" Width="339" MaxLines="20"/>
+            <Button x:Name="btn_pick_effects" Content="Pick Effect" HorizontalAlignment="Left" Height="20" Margin="100,137,0,0" VerticalAlignment="Top" Width="75" Click="Btn_pick_effects_Click"/>
+            <Button x:Name="btn_update_effects" Content="Update" HorizontalAlignment="Left" Height="20" Margin="190,137,0,0" VerticalAlignment="Top" Width="75" Click="Btn_update_effects_Click"/>
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="160" Margin="20,222,0,0" VerticalAlignment="Top" Width="360">
+            <Label Content="OS version" HorizontalAlignment="Left" Margin="10,14,0,0" VerticalAlignment="Top" Width="85"/>
+            <Label x:Name="lab_os_version" Content="---------------" HorizontalAlignment="Left" Margin="150,16,0,0" VerticalAlignment="Top" Width="260" FontFamily="Microsoft Sans Serif"/>
+            <Label Content="Project" HorizontalAlignment="Left" Margin="8,43,0,0" VerticalAlignment="Top" Width="85"/>
+            <Label Content="cras config path" HorizontalAlignment="Left" Margin="8,74,0,0" VerticalAlignment="Top" Width="102"/>
+            <Label Content="ucm suffix" HorizontalAlignment="Left" Margin="8,100,0,-25" VerticalAlignment="Top" Width="85"/>
+            <Label x:Name="lab_cb_project_code" Content="---------------" HorizontalAlignment="Left" Margin="150,43,0,0" VerticalAlignment="Top" Width="260"/>
+            <Label x:Name="lab_cras_path" Content="---------------" HorizontalAlignment="Left" Margin="150,74,0,0" VerticalAlignment="Top" Width="260"/>
+            <Label x:Name="lab_ucm_suffix" Content="---------------" HorizontalAlignment="Left" Margin="150,105,0,-30" VerticalAlignment="Top" Width="260"/>
+        </Grid>
+
+    </Grid>
+</Window>
